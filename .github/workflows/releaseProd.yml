@@ -65,4 +65,4 @@ jobs:
           PLAY_CONFIG_JSON: ${{ secrets.PLAY_CONFIG_JSON }}
 
       - name: Distribute app to Production 🚀
-        run: bundle exec fastlane deploy
+        run: bundle exec fastlane production
