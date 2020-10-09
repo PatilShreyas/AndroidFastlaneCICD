@@ -9,7 +9,7 @@ A sample repository to demonstrate the Automate publishing app to the _Google Pl
 
 | Deployment Status (Production)                                                                                             | Deployment Status (Beta)                                                                                       |
 |----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| ![Release (Production)](https://github.com/PatilShreyas/AppDeployFastlaneCICD/workflows/Release%20(Production)/badge.svg)  | ![Release (Beta)](https://github.com/PatilShreyas/AppDeployFastlaneCICD/workflows/Release%20(Beta)/badge.svg)  |
+| ![Release (Production)](https://github.com/PatilShreyas/AndroidFastlaneCICD/workflows/Release%20(Production)/badge.svg)    | ![Release (Beta)](https://github.com/PatilShreyas/AndroidFastlaneCICD/workflows/Release%20(Beta)/badge.svg)    |
 
 ---
 
