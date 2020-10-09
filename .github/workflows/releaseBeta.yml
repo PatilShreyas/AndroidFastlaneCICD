@@ -2,6 +2,8 @@ name: Release (Beta)
 
 on:
   push:
+    paths:
+      - 'app/**'
     branches: [ beta ]
 
 jobs:

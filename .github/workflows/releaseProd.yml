@@ -2,6 +2,8 @@ name: Release (Production)
 
 on:
   push:
+    paths:
+      - 'app/**'
     branches: [ master ]
 
 jobs:
