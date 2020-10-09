@@ -1,0 +1,2 @@
+json_key_file("play_config.json")
+package_name("dev.shreyaspatil.firebase.app.distribution.demo")
