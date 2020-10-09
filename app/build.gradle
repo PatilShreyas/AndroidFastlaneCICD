@@ -23,8 +23,8 @@ android {
         applicationId "dev.shreyaspatil.firebase.app.distribution.demo"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 10
-        versionName "1.5"
+        versionCode 11
+        versionName "2.0-beta"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.config
