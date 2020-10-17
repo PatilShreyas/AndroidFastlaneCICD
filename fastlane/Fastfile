@@ -4,7 +4,7 @@ platform :android do
 
     desc "Lane for distributing app using Firebase App Distributions"
     lane :distribute do
-        gradle(task: "assembleRelease")
+        gradle(task: "clean assembleRelease")
         firebase_app_distribution(
             app: ENV['FIREBASE_APP_ID'],
             release_notes_file: "FirebaseAppDistributionConfig/release_notes.txt",
