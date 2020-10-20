@@ -7,14 +7,15 @@ A sample repository to demonstrate the Automate publishing app to the _Google Pl
 
 ## Status
 
-| Deployment Status (Production)                                                                                             | Deployment Status (Beta)                                                                                       |
-|----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| ![Release (Production)](https://github.com/PatilShreyas/AndroidFastlaneCICD/workflows/Release%20(Production)/badge.svg)    | ![Release (Beta)](https://github.com/PatilShreyas/AndroidFastlaneCICD/workflows/Release%20(Beta)/badge.svg)    |
+| Deployment Status (Production)                                                                                             | Deployment Status (Beta)                                                                                       | Distribution Status |
+|----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------| -------------------- |
+| ![Release (Production)](https://github.com/PatilShreyas/AndroidFastlaneCICD/workflows/Release%20(Production)/badge.svg)    | ![Release (Beta)](https://github.com/PatilShreyas/AndroidFastlaneCICD/workflows/Release%20(Beta)/badge.svg)    | ![Distribute](https://github.com/PatilShreyas/AndroidFastlaneCICD/workflows/Distribute/badge.svg) |
 
 ---
 
 ## Workflows
 
+- [`distribute.yml`](.github/workflows/distribute.yml) - For Distributing test builds using the Firebase App Distribution.
 - [`releaseBeta.yml`](.github/workflows/releaseBeta.yml) - For deploying application (AAB) to the _beta_ track on to the Google Play Store.
 - [`releaseProd.yml`](.github/workflows/releaseProd.yml) - For deploying application (AAB) to the _production_ track on to the Google Play Store.
 
@@ -23,6 +24,17 @@ A sample repository to demonstrate the Automate publishing app to the _Google Pl
 #### - Fastfile
 
 ```ruby
+    desc "Lane for distributing app using Firebase App Distributions"
+    lane :distribute do
+        gradle(task: "clean assembleRelease")
+        firebase_app_distribution(
+            service_credentials_file: "firebase_credentials.json",
+            app: ENV['FIREBASE_APP_ID'],
+            release_notes_file: "FirebaseAppDistributionConfig/release_notes.txt",
+            groups_file: "FirebaseAppDistributionConfig/groups.txt"
+        )
+    end
+    
     desc "Deploy a beta version to the Google Play"
     lane :beta do
         gradle(task: "clean bundleRelease")
@@ -40,3 +52,4 @@ A sample repository to demonstrate the Automate publishing app to the _Google Pl
 
 - [Fastlane](https://fastlane.tools/)
 - [GitHub Actions CI/CD](https://github.com/features/actions)
+- [Firebase App Distribution](https://firebase.google.com/docs/app-distribution)
