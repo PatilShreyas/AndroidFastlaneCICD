@@ -2,7 +2,7 @@ name: Distribute
 
 on:
   push:
-    branches: [ service-auth ]
+    branches: [ test ]
 
 jobs:
   distribute:
