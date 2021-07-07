@@ -2,8 +2,12 @@
 
 A sample repository to demonstrate the Automate publishing app to the _Google Play Store_ with GitHub Actions⚡+ Fastlane🏃.  
 
-### [_**Refer this article for information**_](#)
-> This article includes all steps or related information for setting up this.
+## Refer these articles
+
+> These article includes all steps or related information for setting up this.
+
+- https://medium.com/firebase-developers/quickly-distribute-app-with-firebase-app-distribution-using-github-actions-fastlane-c7d8eca18ee0
+- https://medium.com/scalereal/automate-publishing-app-to-the-google-play-store-with-github-actions-fastlane-ac9104712486
 
 ## Status
 
